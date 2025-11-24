@@ -1,0 +1,375 @@
+/* ?=======Common CSS======= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+body,
+a,
+p {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #2d2d2d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* *=======Main-Container CSS Goes Here======= */
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* *=======Navbar CSS Goes Here======= */
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 42px;
+}
+.main_nav .logo a img {
+  width: 49px;
+}
+.main_nav .menu ul {
+  display: flex;
+  gap: 24px;
+}
+/* *=======Banner CSS Goes Here======= */
+.banner_main {
+  display: flex;
+  gap: 68px;
+  padding: 42px 56px;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner_main .banner_left {
+  width: 50%;
+}
+.banner_main .banner_left h1 {
+  font-size: 68px;
+  padding-bottom: 24px;
+}
+.banner_main .banner_left p {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  padding-right: 30px;
+}
+.banner_main .banner_left a {
+  background: #2d2d2d;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 24px 64px;
+  display: inline-block;
+}
+.banner_main .banner_right {
+  width: 50%;
+}
+.banner_main .banner_right img {
+  padding-left: 100px;
+}
+
+/* *=======Brand Area CSS Goes Here======= */
+
+.brand_main {
+  display: flex;
+  justify-content: space-between;
+  padding: 56px 68px;
+}
+/* *=======Design Area CSS Goes Here======= */
+/* !Download img replace img style */
+.product_design {
+  width: 124px;
+  height: 124px;
+  background: #f3afa8;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+}
+.arrow_one {
+  width: 73px;
+  height: 2px;
+  background: #2d2d2d;
+  position: absolute;
+  left: 35px;
+  bottom: 29px;
+  transform: rotate(-45deg);
+  transform-origin: left;
+}
+.arrow_one::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: -6px;
+  border: solid #2d2d2d;
+  border-width: 2px 2px 0 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+}
+.arrow_one::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #2d2d2d;
+  position: absolute;
+  left: -5px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.visual_design {
+  width: 124px;
+  height: 124px;
+  background: #ff6250;
+  border-radius: 0 100% 0 0;
+  position: relative;
+}
+.arrow_two {
+  width: 73px;
+  height: 2px;
+  background: #2d2d2d;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-45deg);
+  transform-origin: left;
+}
+.arrow_two::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #2d2d2d;
+  position: absolute;
+  right: -2px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.arrow_two::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #2d2d2d;
+  position: absolute;
+  left: -5px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.art_direction {
+  width: 124px;
+  height: 124px;
+  background: #009379;
+  border-radius: 0 25% 0 25%;
+  position: relative;
+}
+.arrow_three {
+  width: 73px;
+  height: 2px;
+  background: #2d2d2d;
+  position: absolute;
+  right: 60%;
+  top: 60%;
+  transform: translate(-60%, -60%);
+  transform: rotate(-45deg);
+  transform-origin: right;
+}
+.arrow_three::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius:0px 10px 0px 0px ;
+  background: #2d2d2d;
+  position: absolute;
+  right: -2px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.arrow_three::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #2d2d2d;
+  position: absolute;
+  left: -5px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+.design_main .designs .design_img{
+padding-left: 90px;
+}
+/* *=============Design style======== */
+.design_main {
+  display: flex;
+  padding: 42px 24px;
+  gap: 24px;
+}
+.design_main .designs {
+  width: 33%;
+  text-align: center;
+  padding-right: 39px;
+  padding-left: 40px;
+}
+.design_main .designs .design_dtls h2 {
+  font-size: 27px;
+  line-height: 42px;
+  padding-top: 42px;
+  padding-bottom: 12px;
+}
+.design_main .designs .design_dtls p {
+  display: inline-block;
+}
+/* *=======Project Area CSS Goes Here======= */
+.project_main {
+  display: flex;
+  padding: 42px 24px;
+  gap: 42px;
+  flex-direction: column;
+}
+.project_main .project_headline h2 {
+  font-size: 42px;
+  line-height: 32px;
+  font-weight: 600px;
+  text-align: center;
+}
+.project_main .project_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.project_main .project_items #items {
+  width: 394px;
+}
+.project_main .project_items #items h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600px;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+/* *=======Testimonial CSS Goes Here======= */
+
+.testimonial_main {
+  padding: 42px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.testimonial_main .testimonial_dtls {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.testimonial_main .testimonial_headline h2 {
+  font-size: 42px;
+  line-height: 32px;
+  font-weight: 600px;
+  text-align: center;
+}
+.testimonial_main .testimonial_dtls #test {
+  width: 394px;
+  background: #f3f3f3;
+}
+.testimonial_main .testimonial_dtls #test .comments h5 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600px;
+  padding: 42px;
+}
+#test .rating {
+  display: flex;
+  padding: 26px 42px 42px 42px;
+  gap: 16px;
+}
+#test .rating .customer_rating .stars {
+  display: flex;
+  gap: 6px;
+  padding-bottom: 11px;
+}
+#test .rating .customer_rating h5 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600px;
+}
+.testimonial_main .testimonial_dtls :last-child .comments h5 {
+  display: none;
+}
+.testimonial_main .testimonial_dtls :last-child .rating {
+  position: relative;
+  top: 120px;
+}
+.testimonial_main .testimonial_dtls #test:last-child {
+  width: 394px;
+  height: 270px;
+}
+/* *=======Footer Area CSS Goes Here======= */
+.footer_main {
+  padding: 42px 24px 86px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer_main .footer_headline h3 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600px;
+  text-align: left;
+}
+.footer_main .footer_dtls {
+  display: flex;
+  gap: 142px;
+}
+.footer_main .footer_dtls .footer_info {
+  width: 50%;
+}
+.footer_main .footer_dtls .form {
+  width: 50%;
+}
+.footer_dtls .social_icons {
+  display: flex;
+  gap: 24px;
+  padding-top: 42px;
+}
+.form form input {
+  width: 520px;
+  background: #f3f3f3;
+  display: block;
+  margin-bottom: 12px;
+  padding: 16px 24px;
+  border: none;
+}
+.form form input .placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #2d2d2d;
+}
+.form a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #2d2d2d;
+  color: #fff;
+  padding: 24px 64px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+}
