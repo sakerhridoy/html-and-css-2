@@ -46,6 +46,8 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 24px 42px;
+  align-items: center;
+  position: relative;
 }
 .main_nav .logo a img {
   width: 49px;
@@ -54,6 +56,36 @@ img {
   display: flex;
   gap: 24px;
 }
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #2d2d2d;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* *=======Banner CSS Goes Here======= */
 .banner_main {
   display: flex;
@@ -66,8 +98,8 @@ img {
   width: 50%;
 }
 .banner_main .banner_left h1 {
-  font-size: 68px;
-  padding-bottom: 24px;
+    font-size: 61px;
+    padding-bottom: 24px;
 }
 .banner_main .banner_left p {
   display: inline-block;
@@ -372,4 +404,432 @@ padding-left: 90px;
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
+}
+
+/* *=======Responsive Design Media Queries======= */
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (max-width: 1299px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* Large Devices (Desktops, 992px to 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+  
+  .banner_main .banner_left h1 {
+    font-size: 56px;
+  }
+  
+  .banner_main .banner_right img {
+    padding-left: 50px;
+  }
+  
+  .project_main .project_items #items {
+    width: 300px;
+  }
+  
+  .testimonial_main .testimonial_dtls #test {
+    width: 300px;
+  }
+  
+  .testimonial_main .testimonial_dtls #test:last-child {
+    width: 300px;
+  }
+  
+  .form form input {
+    width: 420px;
+  }
+}
+
+/* Medium Devices (Tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  .container {
+    width: 720px;
+  }
+  
+  .main_nav {
+    padding: 20px 24px;
+  }
+  
+  .banner_main {
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 42px;
+  }
+  
+  .banner_main .banner_left {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .banner_main .banner_left h1 {
+    font-size: 48px;
+  }
+  
+  .banner_main .banner_left p {
+    padding-right: 0;
+  }
+  
+  .banner_main .banner_right {
+    width: 100%;
+  }
+  
+  .banner_main .banner_right img {
+    padding-left: 0;
+  }
+  
+  .brand_main {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 42px 24px;
+  }
+  
+  .brand_main .company {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .design_main {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+  
+  .design_main .designs {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .design_main .designs .design_img {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .project_main .project_items {
+    justify-content: center;
+  }
+  
+  .project_main .project_items #items {
+    width: 340px;
+  }
+  
+  .testimonial_main .testimonial_dtls {
+    justify-content: center;
+  }
+  
+  .testimonial_main .testimonial_dtls #test {
+    width: 340px;
+  }
+  
+  .testimonial_main .testimonial_dtls #test:last-child {
+    width: 340px;
+  }
+  
+  .footer_main .footer_dtls {
+    flex-direction: column;
+    gap: 42px;
+  }
+  
+  .footer_main .footer_dtls .footer_info {
+    width: 100%;
+  }
+  
+  .footer_main .footer_dtls .form {
+    width: 100%;
+  }
+  
+  .form form input {
+    width: 100%;
+  }
+}
+
+/* Small Devices (Landscape Phones, 576px to 767px) */
+@media (max-width: 767px) {
+  .container {
+    width: 540px;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .main_nav {
+    flex-wrap: wrap;
+  }
+  
+  .main_nav .menu {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 20px;
+  }
+  
+  .main_nav .menu.active {
+    display: block;
+  }
+  
+  .main_nav .menu ul {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .main_nav .menu ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .banner_main .banner_left h1 {
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+  
+  .banner_main .banner_left a {
+    padding: 20px 48px;
+    font-size: 18px;
+  }
+  
+  .brand_main .company {
+    width: 45%;
+  }
+  
+  .project_main .project_headline h2 {
+    font-size: 36px;
+  }
+  
+  .project_main .project_items #items {
+    width: 100%;
+  }
+  
+  .testimonial_main .testimonial_headline h2 {
+    font-size: 36px;
+  }
+  
+  .testimonial_main .testimonial_dtls #test {
+    width: 100%;
+  }
+  
+  .testimonial_main .testimonial_dtls #test:last-child {
+    width: 100%;
+    height: auto;
+  }
+  
+  .testimonial_main .testimonial_dtls :last-child .rating {
+    position: static;
+  }
+  
+  .testimonial_main .testimonial_dtls :last-child .comments h5 {
+    display: block;
+  }
+  
+  .footer_main .footer_headline h3 {
+    font-size: 28px;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones, up to 575px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .main_nav {
+    padding: 16px 0;
+    flex-wrap: wrap;
+  }
+  
+  .main_nav .menu {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 20px;
+  }
+  
+  .main_nav .menu.active {
+    display: block;
+  }
+  
+  .main_nav .menu ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .main_nav .menu ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .banner_main {
+    padding: 24px 0;
+    gap: 32px;
+  }
+  
+  .banner_main .banner_left h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  
+  .banner_main .banner_left p {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 32px;
+  }
+  
+  .banner_main .banner_left a {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+  
+  .brand_main {
+    padding: 32px 0;
+    gap: 24px;
+  }
+  
+  .brand_main .company {
+    width: 45%;
+  }
+  
+  .brand_main .company img {
+    max-width: 80%;
+  }
+  
+  .design_main {
+    padding: 24px 0;
+  }
+  
+  .design_main .designs .design_dtls h2 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 32px;
+  }
+  
+  .design_main .designs .design_dtls p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .project_main {
+    padding: 32px 0;
+  }
+  
+  .project_main .project_headline h2 {
+    font-size: 32px;
+  }
+  
+  .project_main .project_items #items h3 {
+    font-size: 18px;
+    padding-top: 16px;
+  }
+  
+  .project_main .project_items #items p {
+    font-size: 16px;
+  }
+  
+  .testimonial_main {
+    padding: 32px 0;
+  }
+  
+  .testimonial_main .testimonial_headline h2 {
+    font-size: 32px;
+  }
+  
+  .testimonial_main .testimonial_dtls #test .comments h5 {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 32px 24px;
+  }
+  
+  #test .rating {
+    padding: 20px 24px 32px 24px;
+  }
+  
+  #test .rating .customer_rating h5 {
+    font-size: 18px;
+  }
+  
+  .footer_main {
+    padding: 32px 0 56px 0;
+  }
+  
+  .footer_main .footer_headline h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .footer_main .footer_dtls {
+    gap: 32px;
+  }
+  
+  .footer_main .footer_dtls .footer_info p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .footer_dtls .social_icons {
+    padding-top: 32px;
+    gap: 16px;
+  }
+  
+  .footer_dtls .social_icons i {
+    font-size: 20px;
+  }
+  
+  .form form input {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+  
+  .form a {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+}
+
+/* Very Small Devices (320px to 374px) */
+@media (max-width: 374px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .banner_main .banner_left h1 {
+    font-size: 32px;
+  }
+  
+  .banner_main .banner_left a {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+  
+  .brand_main .company {
+    width: 100%;
+  }
+  
+  .project_main .project_headline h2,
+  .testimonial_main .testimonial_headline h2 {
+    font-size: 28px;
+  }
+  
+  .footer_main .footer_headline h3 {
+    font-size: 22px;
+  }
+  
+  .form a {
+    padding: 14px 32px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
 }

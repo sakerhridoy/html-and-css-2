@@ -22,7 +22,12 @@
         <div class="logo">
           <a href="#"><img src="images/logo.png" alt="logo"></a>
         </div>
-        <div class="menu">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="menu" id="nav-menu">
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Work</a></li>
@@ -352,6 +357,26 @@
     </div>
   </footer>
   <!-- !====Footer Area End Here===== -->
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a menu item
+    const menuLinks = document.querySelectorAll('.menu ul li a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,211 @@
+/* ========================================
+   RESPONSIVE DESIGN - QUICK REFERENCE
+   ======================================== */
+
+/* 
+   This file shows the key responsive patterns used in style.css
+   Use this as a reference for understanding the responsive implementation
+*/
+
+/* ===== HAMBURGER MENU PATTERN ===== */
+.menu-toggle {
+  display: none;              /* Hidden by default on desktop */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: flex;            /* Show on mobile */
+  }
+  
+  .main_nav .menu {
+    display: none;            /* Hide menu by default */
+    width: 100%;
+  }
+  
+  .main_nav .menu.active {
+    display: block;           /* Show when toggled */
+  }
+}
+
+/* ===== FLEXIBLE CONTAINER PATTERN ===== */
+.container {
+  width: 1280px;              /* Desktop default */
+  margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .container { width: 960px; }
+}
+
+@media (max-width: 991px) {
+  .container { width: 720px; }
+}
+
+@media (max-width: 767px) {
+  .container { width: 540px; }
+}
+
+@media (max-width: 575px) {
+  .container { 
+    width: 100%;              /* Full width on mobile */
+    padding: 0 20px;          /* Add padding instead */
+  }
+}
+
+/* ===== RESPONSIVE GRID PATTERN ===== */
+/* Desktop: 3 columns */
+.project_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.project_items #items {
+  width: 394px;               /* Fixed width on desktop */
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 991px) {
+  .project_items #items {
+    width: 340px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+  .project_items #items {
+    width: 100%;              /* Full width on mobile */
+  }
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY PATTERN ===== */
+.banner_left h1 {
+  font-size: 68px;            /* Desktop */
+}
+
+@media (max-width: 1199px) {
+  .banner_left h1 {
+    font-size: 56px;          /* Large tablet */
+  }
+}
+
+@media (max-width: 991px) {
+  .banner_left h1 {
+    font-size: 48px;          /* Tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .banner_left h1 {
+    font-size: 42px;          /* Large phone */
+  }
+}
+
+@media (max-width: 575px) {
+  .banner_left h1 {
+    font-size: 36px;          /* Small phone */
+  }
+}
+
+@media (max-width: 374px) {
+  .banner_left h1 {
+    font-size: 32px;          /* Very small phone */
+  }
+}
+
+/* ===== LAYOUT SWITCH PATTERN ===== */
+/* Desktop: Side-by-side */
+.banner_main {
+  display: flex;
+  gap: 68px;
+}
+
+.banner_left, .banner_right {
+  width: 50%;
+}
+
+/* Mobile: Stacked */
+@media (max-width: 991px) {
+  .banner_main {
+    flex-direction: column;   /* Stack vertically */
+  }
+  
+  .banner_left, .banner_right {
+    width: 100%;              /* Full width */
+    text-align: center;       /* Center content */
+  }
+}
+
+/* ===== RESPONSIVE SPACING PATTERN ===== */
+.design_main {
+  padding: 42px 24px;         /* Desktop spacing */
+}
+
+@media (max-width: 991px) {
+  .design_main {
+    padding: 32px 24px;       /* Reduced on tablet */
+  }
+}
+
+@media (max-width: 575px) {
+  .design_main {
+    padding: 24px 0;          /* Minimal on mobile */
+  }
+}
+
+/* ===== RESPONSIVE BUTTON PATTERN ===== */
+.banner_left a {
+  padding: 24px 64px;         /* Desktop */
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .banner_left a {
+    padding: 20px 48px;       /* Tablet */
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner_left a {
+    padding: 16px 40px;       /* Mobile */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .banner_left a {
+    padding: 14px 32px;       /* Small mobile */
+    font-size: 15px;
+  }
+}
+
+/* ===== RESPONSIVE FORM PATTERN ===== */
+.form form input {
+  width: 520px;               /* Desktop */
+}
+
+@media (max-width: 1199px) {
+  .form form input {
+    width: 420px;             /* Laptop */
+  }
+}
+
+@media (max-width: 991px) {
+  .form form input {
+    width: 100%;              /* Full width on tablet/mobile */
+  }
+}
+
+/* ===== KEY BREAKPOINTS SUMMARY ===== */
+/*
+  1299px - Extra large desktops
+  1199px - Large desktops/laptops
+   991px - Tablets (landscape)
+   767px - Tablets (portrait) / Large phones
+   575px - Phones (portrait)
+   374px - Small phones
+*/
